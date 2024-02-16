@@ -1,0 +1,34 @@
+/* 
+color palette
+page background - fcf6bd
+input background - 3d405b
+header background - f2cc8f
+task background - f4f1de
+*/
+
+body{
+    background-color: #fcf6bd;
+}
+
+.header{
+    background-color: #f2cc8f;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.taskCard{
+    background-color: #f4f1de;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+
+.taskForm{
+    background-color: #fcf6bd;
+    border-radius: 5px;
+}
+
+.inputs{
+    padding: 5px;
+    border: 1px solid black;
+}
