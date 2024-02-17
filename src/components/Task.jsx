@@ -1,7 +1,7 @@
 import React from "react";
 
 function TaskCard(props) {
-  //time 12h format
+  //24hr -> 12h
   let here = props.time;
   let hours = here.slice(0, 2);
   let minutes = here.slice(2);
@@ -23,7 +23,9 @@ function TaskCard(props) {
   }
 
   return (
-    <div className={`row ${collapse} taskCard text-start align-items-center`}>
+    <div
+      className={`row ${collapse} taskCard text-start align-items-center border-dark border-bottom`}
+    >
       <div className="col-sm-12">
         <h1>{done ? <s>{props.task}</s> : props.task}</h1>
       </div>
@@ -31,10 +33,12 @@ function TaskCard(props) {
         <div className="col-sm-4">
           <h6>{done ? <s>{time}</s> : time}</h6>
         </div>
-        <div className="col-sm-8">
+
+        <div className="col-sm-12 d-flex justify-content-start">
+          <br />
           <p>{done ? <s>{props.notes}</s> : props.notes}</p>
         </div>
-        <div className="col-sm-12">
+        <div className="col-sm-12 text-end">
           {!done ? (
             <input
               class="btn btn-dark btn-sm"
@@ -54,7 +58,7 @@ function TaskCard(props) {
             class="btn btn-dark btn-sm"
             onClick={DeleteTask}
             type="button"
-            value="delete"
+            value="X"
           />
         </div>
       </div>

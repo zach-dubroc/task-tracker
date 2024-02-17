@@ -38,8 +38,8 @@ function TaskInput() {
   return (
     <div className="row d-flex justify-content-center">
       <div className="col-sm-8">
-        <div className="row inputs">
-          <div className="col-sm-6">
+        <div className="row todoBody">
+          <div className="col-sm-6 inputs">
             <form className="taskForm" onSubmit={handleSubmit}>
               <div className="row">
                 <label htmlFor="task">task</label>
@@ -53,6 +53,7 @@ function TaskInput() {
                   onChange={handleChange}
                 />
               </div>
+              {/* maybe change to textare */}
               <div className="row">
                 <label htmlFor="task">notes</label>
                 <br />
@@ -67,7 +68,7 @@ function TaskInput() {
               </div>
 
               <div className="row">
-                <div className="col-sm-6">
+                <div className="col-sm-12">
                   <label htmlFor="time">time</label>
                   <br />
                   <input
@@ -77,8 +78,12 @@ function TaskInput() {
                     value={taskData.time}
                     onChange={handleChange}
                   />
-                  <button class="btn btn-dark btn-sm" onClick={handleSubmit}>
-                    add task
+
+                  <button
+                    class="btn btn-dark btn-sm align-items-center"
+                    onClick={handleSubmit}
+                  >
+                    add
                   </button>
                 </div>
               </div>
@@ -91,7 +96,7 @@ function TaskInput() {
               return (
                 <TaskCard
                   task={task.task}
-                  notes={task.notes}
+                  notes={`-${task.notes}-`}
                   time={task.time}
                 />
               );

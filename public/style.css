@@ -17,8 +17,7 @@ body{
 }
 
 .taskCard{
-    background-color: #f4f1de;
-    border: 1px solid black;
+    background-color: #fcf6bd;
     border-radius: 5px;
     
 }
@@ -26,9 +25,19 @@ body{
 .taskForm{
     background-color: #fcf6bd;
     border-radius: 5px;
+    
 }
-
-.inputs{
+.todoBody{
     padding: 5px;
     border: 1px solid black;
+    border-radius: 5px;
+}
+
+button{
+    overflow-wrap: nowrap;
+    margin: 5px;
+}
+
+.btn{
+    margin: 5px;
 }
