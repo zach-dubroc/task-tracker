@@ -2,7 +2,6 @@ import React from "react";
 import TaskCard from "./Task";
 
 function TaskInput() {
-  let counter = 0;
   const [taskData, setTaskData] = React.useState({
     task: "",
     notes: "",
@@ -53,7 +52,7 @@ function TaskInput() {
                   onChange={handleChange}
                 />
               </div>
-              {/* maybe change to textare */}
+              {/* change textarea */}
               <div className="row">
                 <label htmlFor="task">notes</label>
                 <br />

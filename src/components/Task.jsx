@@ -1,15 +1,17 @@
 import React from "react";
 
 function TaskCard(props) {
-  //24hr -> 12h
+  //24hr -> 12h (12-1 machine broke)
   let here = props.time;
   let hours = here.slice(0, 2);
   let minutes = here.slice(2);
   let time = "";
   let ampm = hours < 12 ? "am" : "pm";
   hours = hours % 12;
+  hours == 0 && minutes != 0 ? (hours = 12) : (hours = hours % 12);
   time = hours + minutes + ampm;
   time == "0am" ? (time = "") : (time = hours + minutes + ampm);
+  console.log(hours);
 
   const [done, setDone] = React.useState(false);
   const [collapse, setCollapse] = React.useState("visible");
